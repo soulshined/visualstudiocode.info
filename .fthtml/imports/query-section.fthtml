@@ -1,0 +1,20 @@
+div (.flex-row .flex-space-between) {
+    div (.flex-1 .relative .mr-4) {
+        label (.w-100 aria-description="Enter text to filter and search for related keybinds and settings") 
+        {
+            "Query:"
+            input(#queryinput placeholder=query type=text autofocus)
+            span(.border)
+        }
+    }
+
+    div(#versions .align-items-center role=listbox aria-description="This list allows to specify which vscode version you are querying. For example, if the vscode version is 1.49.1 the major version is 1, the minor version 49, the patch version is 1. You can select these independently") {
+        "Version:  " 
+        label(#version-major-label aria-hidden=true for="#version-major") "vscode major version"
+        select (#version-major aria-labelledby="#version-major-label")
+        label(#version-minor-label aria-hidden=true for="#version-minor") "vscode minor version"
+        select (#version-minor aria-labelledby="#version-minor-label")
+        label(#version-patch-label aria-hidden=true for="#version-patch") "vscode patch version"
+        select (#version-patch aria-labelledby="#version-patch-label")
+    }
+}

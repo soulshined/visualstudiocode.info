@@ -1,0 +1,23 @@
+{
+    "workbench.colorCustomizations": {},
+    "liveServer.settings.root": "./www",
+    "liveServer.settings.fullReload": true,
+
+    "files.exclude": {
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.html" : true
+    },
+
+    "editor.tabSize": 4,
+
+    "fthtml.exportOnSave": true,
+    "fthtml.validateOnSave": false,
+    "fthtml.clearOutputOnSave": true,
+
+    "es6-css-minify.minifyOnSave": "exists",
+    "es6-css-minify.jsMinPath": "./www/js",
+    "es6-css-minify.cssMinPath": "./www/css"
+}

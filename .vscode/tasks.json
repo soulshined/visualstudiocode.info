@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "open files",
+            "type": "shell",
+            "command": "code todo.todo",
+            "isBackground": true,
+            "dependsOn": [
+                "cleanup editors"
+            ],
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "clear": true,
+            },
+            "problemMatcher": [],
+        },
+        {
+            "label": "cleanup editors",
+            "command": "${command:workbench.action.closeAllEditors}",
+            "isBackground": true,
+            "problemMatcher": []
+        }
+    ]
+}

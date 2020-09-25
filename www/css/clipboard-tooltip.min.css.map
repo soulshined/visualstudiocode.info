@@ -1,0 +1,8 @@
+{
+    "version": 3,
+    "sources": [
+        "clipboard-tooltip.css"
+    ],
+    "names": [],
+    "mappings": "AAAA,mBACI,QAAS,KACT,SAAU,SACV,QAAS,IAAI,KACb,UAAW,KACX,iBAAkB,QAClB,MAAO,KACP,cAAe,IACf,WAAY,mBACZ,UAAW,SAAS,IACpB,QAAS,EAGb,oBACI,KAAO,UAAW,UAClB,GAAK,UAAW"
+}

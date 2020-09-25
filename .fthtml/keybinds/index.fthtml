@@ -1,0 +1,63 @@
+doctype "html"
+html (lang=en)
+{
+    template {
+        import "head"
+        title "vscode | Keybinds "
+        stylesheets '
+            <link rel=stylesheet type="text/css" media=screen href="/css/keybinds.min.css" />
+        '
+        scripts '
+            <script src="/js/keybinds-main.js" type="module"></script>
+        '
+    }
+
+    body
+    {
+        import "header"
+        import "noscript"
+        import "clipboard-tooltip"
+
+        main
+        {
+            div (#filter-area)
+            {
+                import "query-section"
+
+                div (.flex-row .flex-justify-end)
+                {
+                    div (#filters role=listbox aria-description="Options to filter the queried keybinds") {
+                        label(aria-hidden=true for="#sequence-filter")
+                        button (#sequence-filter type=button value=sequence .selected .filter .open role=option) "Sequence"
+                        label(aria-hidden=true for="#command-filter")
+                        button (#command-filter type=button value=command .selected .filter  role=option) "Command"
+                        label(aria-hidden=true for="#keywords-filter")
+                        button (#keywords-filter type=button value=keywords .selected .filter role=option) "Keywords"
+                        label(aria-hidden=true for="#whenexpression-filter")
+                        button (#whenexpression-filter type=button value=whenexpr .selected .filter  role=option) "When Expression"
+                        label(aria-hidden=true for="#allow-null-filter")
+                        button (#allow-null-filter type=button value="allow_null" .selected .filter .close .flex-order-last role=option) "Include No Default"
+                    }
+                }
+            }
+
+            div (#keybinds-wrapper aria-description="Output of results that match the query input and filter options. Each list item is displayed with keywords and keyboard shortcut identifiers and the when-expression. This page uses indefinite scrolling, when at the bottom of the list, scroll down to load more results, if any") {
+                div {
+                    template 
+                    {
+                        import "edit-on-gh-btn"
+                        href "https://github.com/soulshined/visualstudiocode.info/blob/master/www/js/model/keybinds/keybinds-metadata.js"
+                    } 
+        
+                    ul (.list-style-none .ul-reset .inline) {
+                        li(.desktop-only) "Sequence"
+                        li(.desktop-only) "When Expression"
+                    }
+                }
+                ul (#keybindsList .list-style-none .ul-reset aria-describedby="#keybinds-wrapper")
+            }
+        }
+
+        import "footer"
+    }
+}

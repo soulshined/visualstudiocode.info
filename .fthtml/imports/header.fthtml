@@ -1,0 +1,12 @@
+header (role=banner)
+{
+    div "visualstudiocode.info"
+    nav 
+    {
+        ul 
+        {
+            li { a(href="/settings") "Settings" }
+            li { a(href="/keybinds") "Keybinds" }
+        }
+    }
+}

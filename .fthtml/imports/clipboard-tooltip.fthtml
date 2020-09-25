@@ -1,0 +1,4 @@
+div (#clipboard-tooltip)
+{
+    "Successfully added to clipboard!"
+}

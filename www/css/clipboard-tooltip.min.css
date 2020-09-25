@@ -1,0 +1,2 @@
+#clipboard-tooltip{display:none;position:absolute;padding:5px 15px;font-size:.8em;background-color:#0e9594;color:snow;border-radius:3px;box-shadow:var(--drop-shadow);animation:peekaboo .2s;z-index:9}@keyframes peekaboo{from{transform:scale(.5)}to{transform:scale(1)}}
+/*# sourceMappingURL=clipboard-tooltip.min.css.map */

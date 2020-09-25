@@ -1,0 +1,63 @@
+doctype "html"
+html (lang=en)
+{
+    template {
+        import "head"
+        title "vscode | Settings "
+        stylesheets '
+            <link rel=stylesheet type="text/css" media=screen href="/css/settings.min.css" />
+        '
+        scripts '
+            <script src="/js/settings-main.js" type="module"></script>
+        '
+    }
+
+    body
+    {
+        import "header"
+        import "to-top-btns"
+        import "noscript"
+        import "clipboard-tooltip"
+
+        main
+        {
+            div (#filter-area)
+            {
+                import "query-section"
+
+                div (.flex-row .flex-space-between .align-items-center) {
+                    div (.align-items-center)
+                    {
+                        button(#toggle-collapse aria-label="toggle open/close all results")
+                        div(.flex-row #glossary-index-mobile .align-items-center) { 
+                            label(for="#glossary-index-mobile-select" .text-center) "Section List"
+                            select(.w-100 aria-description="Quickly jump to sections of settings on the page. This dynamically updates based on the filtered results and matches found") 
+                        }
+                        div (#glossary-index aria-description="Quickly jump to sections of settings on the page. This dynamically updates based on the filtered results and matches found") {
+                            ul (.ul-reset .list-style-none .inline)
+                        }
+                    }
+
+                    div (#filters .align-items-center role=listbox aria-description="Options to filter the queried settings") {
+                        label (aria-hidden=true for="#identifier-filter") "Identifier Filter"
+                        button(#identifier-filter type=button value=identifier .filter .selected role=option) "Identifier"
+                        label (aria-hidden=true for="#description-filter") "Description Filter"
+                        button(#description-filter type=button value=description .filter .selected role=option) "Description"
+                        label (aria-hidden=true for="#keywords-filter") "Keywords filter"
+                        button(#keywords-filter type=button value=keywords .filter .selected role=option) "Keywords"
+                    }
+                }
+            }
+
+            template 
+            {
+                import "edit-on-gh-btn"
+                href "https://github.com/soulshined/visualstudiocode.info/blob/master/www/js/model/settings/settings-metadata.js"
+            } 
+
+            div (#settingsList role=group aria-description="Output of results that match the query input and filter options. These are alphabetical and divided and categorized into sections. Each section has dropdown details for their respective categorized settings")
+        }
+
+        import "footer"
+    }
+}

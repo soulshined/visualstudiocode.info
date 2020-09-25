@@ -1,0 +1,9 @@
+footer (role=contentinfo)
+{
+    p "No affiliation to Microsoft or it's products"
+    p 
+    {
+        "icons courtesy of " 
+        a (href="https://www.flaticon.com/" target=_blank) "flaticon.com"
+    }
+}

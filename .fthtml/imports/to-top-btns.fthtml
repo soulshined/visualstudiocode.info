@@ -1,0 +1,6 @@
+div (#to-tops aria-description="Navigate quickly to the top of the page or to the closest sections up or down")
+{
+    button (type=button #scroll-to-prev-section aria-label="navigate to closest previous section") "A"
+    button (type=button #scroll-to-top-btn aria-label="navigate to top of page")
+    button (type=button #scroll-to-next-section aria-label="navigate to next section") "Z"
+}

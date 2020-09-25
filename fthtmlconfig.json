@@ -1,0 +1,11 @@
+{
+    "exportDir": "./www",
+    "rootDir": ".fthtml",
+    "importDir": ".fthtml/imports",
+    "templateDir": ".fthtml/templates",
+    "excluded": [
+        "**/imports/**",
+        "**/templates/**"
+    ],
+    "keepTreeStructure": true
+}
